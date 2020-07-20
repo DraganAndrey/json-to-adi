@@ -93,6 +93,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<packageName>ru.stm.JsonToADIConverter.schema</packageName>
 					<sources>${project.basedir}/src/main/resources/schema</sources>
 					<outputDirectory>${project.basedir}/target/generated-sources/</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
