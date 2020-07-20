@@ -9,5 +9,4 @@ public class JsonToAdiConverterApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JsonToAdiConverterApplication.class, args);
 	}
-
 }
