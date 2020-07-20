@@ -51,8 +51,6 @@ public class AssetMovieServiceImpl extends AbstractAssetService {
         appDataHelper.addAppData("Tvod_Rights_Start_Date", movieItem.getTvodRightsStartDate(), movieData);
         appDataHelper.addAppData("Tvod_Window", movieItem.getTvodWindow(), movieData);
         appDataHelper.addAppData("Est_Storage_To", movieItem.getEstStorageTo(), movieData);
-        appDataHelper.addAppData("Tvod_Window", movieItem.getTvodWindow(), movieData);
-        appDataHelper.addAppData("Tvod_Window", movieItem.getTvodWindow(), movieData);
         Price price = movieItem.getPrice();
         if (Objects.nonNull(price)) {
             appDataHelper.addAppData("Price_Payment_Method", price.getPaymentMethod(), movieData);
@@ -88,7 +86,6 @@ public class AssetMovieServiceImpl extends AbstractAssetService {
             appDataHelper.addAppData("Audio_Type", masterObject.getAudioType(), movieData);
             appDataHelper.addAppData("Is_Hdr", masterObject.getIsHdr(), movieData);
             appDataHelper.addAppData("Frame_Rate", masterObject.getFps(), movieData);
-            appDataHelper.addAppData("Audio_Type", masterObject.getDuration(), movieData);
             appDataHelper.addAppData("Run_time", masterObject.getDuration(), movieData);
             appDataHelper.addAppData("Display_Run_Time", masterObject.getDurationText(), movieData);
             List<String> subtitles = masterObject.getSubtitles();

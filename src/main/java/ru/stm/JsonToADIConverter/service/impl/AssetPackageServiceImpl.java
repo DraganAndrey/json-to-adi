@@ -1,5 +1,6 @@
 package ru.stm.JsonToADIConverter.service.impl;
 
+import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.MovieItem;
 import ru.stm.JsonToADIConverter.schema.AMSType;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class AssetPackageServiceImpl extends AbstractAssetService {
     @Override
     public AssetType prepareAsset(MovieItem movieItem) {
