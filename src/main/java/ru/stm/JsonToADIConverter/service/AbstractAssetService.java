@@ -12,7 +12,7 @@ public abstract class AbstractAssetService  implements AssetService {
 
     protected AMSType prepareAms(MovieItem movieItem){
         AMSType amsType = new AMSType();
-        amsType.setAssetClass("package");
+        amsType.setAssetClass(this.getServiceName());
         amsType.setAssetName(prepareAmsTitle(movieItem.getTitleEn()));
         amsType.setCreationDate(OffsetDateTime.now().toString());
         amsType.setAssetID(UUID.randomUUID().toString());
@@ -23,7 +23,7 @@ public abstract class AbstractAssetService  implements AssetService {
 
     protected String prepareAmsTitle(String movieTitle){
         List<String> titleList = Arrays.asList(movieTitle.split(" "));
-        titleList.add("title");
+        titleList.add(this.getServiceName());
         return String.join("_", titleList);
     }
 
