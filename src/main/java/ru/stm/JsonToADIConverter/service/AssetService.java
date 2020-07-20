@@ -4,7 +4,7 @@ import ru.stm.JsonToADIConverter.pojo.InputJson;
 import ru.stm.JsonToADIConverter.pojo.MovieItem;
 import ru.stm.JsonToADIConverter.schema.AssetType;
 
-public interface AssetMovieService {
+public interface AssetService {
 
-    AssetType getMovieAsset(MovieItem movieItem);
+    AssetType prepareAsset(MovieItem movieItem);
 }

@@ -1,6 +1,6 @@
 package ru.stm.JsonToADIConverter.service.impl;
 
-import ru.stm.JsonToADIConverter.pojo.InputJson;
+import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.MasterObject;
 import ru.stm.JsonToADIConverter.pojo.MovieItem;
 import ru.stm.JsonToADIConverter.pojo.SkipingFragment;
@@ -8,15 +8,16 @@ import ru.stm.JsonToADIConverter.schema.AMSType;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
 import ru.stm.JsonToADIConverter.schema.AssetType;
 import ru.stm.JsonToADIConverter.schema.MetadataType;
-import ru.stm.JsonToADIConverter.service.AssetMovieService;
+import ru.stm.JsonToADIConverter.service.AssetService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssetMovieServiceImpl implements AssetMovieService {
+@Service
+public class AssetMovieServiceImpl implements AssetService {
 
 
-    public AssetType getMovieAsset(MovieItem movieItem) {
+    public AssetType prepareAsset(MovieItem movieItem) {
         AssetType assetType = new AssetType();
         MetadataType metadataType = new MetadataType();
         AMSType amsType = new AMSType();
