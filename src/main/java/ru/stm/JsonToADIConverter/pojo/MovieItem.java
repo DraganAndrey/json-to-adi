@@ -1,10 +1,12 @@
 package ru.stm.JsonToADIConverter.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Objects;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,7 +15,7 @@ public class MovieItem {
     String contentType;
     @JsonProperty(value = "content_id")
     Long contentId;
-    @JsonProperty(value = "content_id")
+    @JsonProperty(value = "primary_genres")
     List<String> primaryGenres;
     List<String> studios;
     @JsonProperty(value = "is_russian")
@@ -105,8 +107,8 @@ public class MovieItem {
     List<String> downloadable;
     @JsonProperty(value = "master_objs")
     List<MasterObject> masterObjects;
-    @JsonProperty(value = "trailer_array")
-    List<String> trailerArray;
+    @JsonIgnore//(value = "trailer_array")
+    List<Objects> trailerArray;
     @JsonProperty(value = "is_presale")
     Boolean isPresale;
     @JsonProperty(value = "datetime_publication")
@@ -121,11 +123,11 @@ public class MovieItem {
     List<ExternalId> externalIds;
     @JsonProperty(value = "movie_drm")
     String movieDrm;
-    String price;
+    Object price;
     @JsonProperty(value = "trailer_available")
     Boolean trailerAvailable;
     @JsonProperty(value = "file_data")
-    String fileData;
+    Object fileData;
     String year;
     List<Country> countries;
     List<Genre> genres;

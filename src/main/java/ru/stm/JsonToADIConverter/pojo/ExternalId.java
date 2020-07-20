@@ -9,5 +9,5 @@ import lombok.Data;
 public class ExternalId {
     @JsonProperty(value = "source_id")
     Long sourceId;
-    Long value;
+    String value;
 }

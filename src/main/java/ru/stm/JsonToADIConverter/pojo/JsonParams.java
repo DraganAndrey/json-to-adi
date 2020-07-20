@@ -12,6 +12,7 @@ public class JsonParams {
     Map<String, String> cookies;
     Argumets arguments;
 
+    @Data
     public static class Argumets {
         List<String> client;
     }
