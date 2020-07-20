@@ -7,4 +7,6 @@ import ru.stm.JsonToADIConverter.schema.AssetType;
 public interface AssetService {
 
     AssetType prepareAsset(MovieItem movieItem);
+
+
 }

@@ -8,6 +8,7 @@ import ru.stm.JsonToADIConverter.schema.AMSType;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
 import ru.stm.JsonToADIConverter.schema.AssetType;
 import ru.stm.JsonToADIConverter.schema.MetadataType;
+import ru.stm.JsonToADIConverter.service.AbstractAssetService;
 import ru.stm.JsonToADIConverter.service.AssetService;
 import ru.stm.JsonToADIConverter.service.util.AppDataHelper;
 
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class AssetTitleServiceImpl implements AssetService {
+public class AssetTitleServiceImpl extends AbstractAssetService {
 
     @Autowired
     private AppDataHelper helper;
@@ -30,8 +31,12 @@ public class AssetTitleServiceImpl implements AssetService {
 
         MetadataType titleMetaData = new MetadataType();
         titleMetaData.setAMS(this.prepareAms(movieItem));
+
         List<AppDataType> appDataTypeList = this.prepareAppDataType(movieItem);
-        return null;
+        titleMetaData.getAppData().addAll(appDataTypeList);
+
+        assetType.setMetadata(titleMetaData);
+        return assetType;
     }
 
     private List<AppDataType> prepareAppDataType(MovieItem movieItem) {
@@ -80,20 +85,8 @@ public class AssetTitleServiceImpl implements AssetService {
         return appDataTypes;
     }
 
-    private AMSType prepareAms(MovieItem movieItem){
-        AMSType amsType = new AMSType();
-        amsType.setAssetClass("title");
-        amsType.setAssetName(prepareAmsTitle(movieItem.getTitleEn()));
-        amsType.setCreationDate(OffsetDateTime.now().toString());
-        amsType.setAssetID(UUID.randomUUID().toString());
-        return amsType;
-    }
-
-
-
-    private String prepareAmsTitle(String movieTitle){
-        List<String> titleList = Arrays.asList(movieTitle.split(" "));
-        titleList.add("title");
-        return String.join("_", titleList);
+    @Override
+    protected String getServiceName() {
+        return "title";
     }
 }

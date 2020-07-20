@@ -39,9 +39,12 @@ public class ConvertServiceImpl implements ConvertService {
                     .stream()
                     .map(service-> service.prepareAsset(item))
                     .collect(Collectors.toList());
-
-            //ToDo
-            return new ADIType();
+            ADIType adiType = new ADIType();
+            adiType.setAsset(assetTypeList.stream().filter(asset -> asset.getMetadata().getAMS().getAssetClass().equals("package")).findFirst().get());
+            adiType.getAsset()
+                    .getAsset()
+                    .addAll(assetTypeList.stream().filter(asset-> !asset.getMetadata().getAMS().getAssetClass().equals("package")).collect(Collectors.toList()));
+            return adiType;
         }).collect(Collectors.toList());
     }
 
