@@ -5,8 +5,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SkipingFragment {
-    String name;
-    String startTime;
-    String targetTime;
+public class SegmentPrice {
+    private String segment;
+    private String price;
 }

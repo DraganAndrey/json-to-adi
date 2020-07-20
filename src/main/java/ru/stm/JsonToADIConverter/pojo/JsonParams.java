@@ -9,12 +9,12 @@ import java.util.Map;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonParams {
-    Map<String, String> cookies;
-    Argumets arguments;
+    private Map<String, String> cookies;
+    private Argumets arguments;
 
     @Data
     public static class Argumets {
-        List<String> client;
+        private List<String> client;
     }
 
 }

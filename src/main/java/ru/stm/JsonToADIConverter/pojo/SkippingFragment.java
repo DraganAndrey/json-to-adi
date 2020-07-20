@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Director {
-    private Long id;
+public class SkippingFragment {
     private String name;
-    private String name_en;
+    private String startTime;
+    private String targetTime;
 }

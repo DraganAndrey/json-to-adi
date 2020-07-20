@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Actor {
-    Long id;
-    String name;
-    String name_en;
+    private Long id;
+    private String name;
+    private String name_en;
 }

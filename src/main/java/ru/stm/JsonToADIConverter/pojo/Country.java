@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Country {
-    String name;
+    private String name;
 }

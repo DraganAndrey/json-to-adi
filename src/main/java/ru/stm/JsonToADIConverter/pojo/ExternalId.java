@@ -8,6 +8,6 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ExternalId {
     @JsonProperty(value = "source_id")
-    Long sourceId;
-    String value;
+    private Long sourceId;
+    private String value;
 }

@@ -4,14 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.InputJson;
-import ru.stm.JsonToADIConverter.pojo.MasterObject;
-import ru.stm.JsonToADIConverter.pojo.MovieItem;
-import ru.stm.JsonToADIConverter.pojo.SkipingFragment;
 import ru.stm.JsonToADIConverter.schema.*;
 import ru.stm.JsonToADIConverter.service.AssetService;
 import ru.stm.JsonToADIConverter.service.ConvertService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
