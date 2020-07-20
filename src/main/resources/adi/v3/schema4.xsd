@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ContractName" type="xs:string" />
+    <xs:element name="BillingGracePeriod" type="xs:duration" />
+    <xs:element name="RentalPeriod" type="xs:duration" />
+    <xs:element name="HomeVideoWindow" type="xs:duration" />
+    <xs:element name="SubscriberViewLimit">
+        <xs:complexType>
+            <xs:attribute name="startDateTime" type="xs:dateTime" use="required" />
+            <xs:attribute name="endDateTime" type="xs:string" use="required" />
+            <xs:attribute name="maximumViews" type="xs:unsignedByte" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SuggestedPrice" type="xs:decimal" />
+    <xs:element name="DistributorRoyaltyInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="OrganizationName" type="xs:string" />
+                <xs:element name="RoyaltyPercent" type="xs:decimal" />
+                <xs:element name="RoyaltyMinimum" type="xs:decimal" />
+                <xs:element name="RoyaltyFlatRate" type="xs:decimal" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="StudioRoyaltyInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="OrganizationName" type="xs:string" />
+                <xs:element name="OrganizationCode" type="xs:string" />
+                <xs:element name="RoyaltyPercent" type="xs:decimal" />
+                <xs:element name="RoyaltyMinimum" type="xs:decimal" />
+                <xs:element name="RoyaltyFlatRate" type="xs:decimal" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

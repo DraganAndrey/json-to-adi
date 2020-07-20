@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:terms="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" xmlns:content="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" xmlns:title="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" xmlns:vod30="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" xmlns:offer="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="schema1.xsd" namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" />
+    <xs:import schemaLocation="schema2.xsd" namespace="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" />
+    <xs:import schemaLocation="schema3.xsd" namespace="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" />
+    <xs:import schemaLocation="schema4.xsd" namespace="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" />
+    <xs:import schemaLocation="schema5.xsd" namespace="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" />
+    <xs:element name="ADI3">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="Offer">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="core:AssetName" />
+                                <xs:element ref="core:Product" />
+                                <xs:element ref="core:Provider" />
+                                <xs:element ref="core:Description" />
+                                <xs:element ref="core:Ext" />
+                                <xs:element ref="offer:Presentation" />
+                                <xs:element ref="offer:PromotionalContentGroupRef" />
+                                <xs:element ref="offer:ProviderContentTier" />
+                                <xs:element ref="offer:BillingId" />
+                                <xs:element ref="offer:TermsRef" />
+                                <xs:element ref="offer:ContentGroupRef" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Title">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element maxOccurs="unbounded" ref="core:AlternateId" />
+                                <xs:element ref="core:ProviderQAContact" />
+                                <xs:element ref="core:AssetName" />
+                                <xs:element ref="core:Product" />
+                                <xs:element ref="core:Provider" />
+                                <xs:element ref="core:Description" />
+                                <xs:element ref="core:Ext" />
+                                <xs:element ref="title:LocalizableTitle" />
+                                <xs:element ref="title:Rating" />
+                                <xs:element maxOccurs="unbounded" ref="title:Advisory" />
+                                <xs:element ref="title:IsClosedCaptioning" />
+                                <xs:element ref="title:DisplayRunTime" />
+                                <xs:element ref="title:Year" />
+                                <xs:element ref="title:CountryOfOrigin" />
+                                <xs:element maxOccurs="unbounded" ref="title:Genre" />
+                                <xs:element ref="title:ShowType" />
+                                <xs:element ref="title:IsSeasonPremier" />
+                                <xs:element ref="title:IsSeasonFinale" />
+                                <xs:element ref="title:IsEncryptionRequired" />
+                                <xs:element ref="title:BoxOffice" />
+                                <xs:element ref="title:ProgrammerCallLetters" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ContentGroup">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:choice maxOccurs="unbounded">
+                                    <xs:element ref="core:AlternateId" />
+                                    <xs:element ref="offer:TitleRef" />
+                                    <xs:element ref="offer:MovieRef" />
+                                    <xs:element ref="offer:PreviewRef" />
+                                    <xs:element ref="offer:BoxCoverRef" />
+                                </xs:choice>
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Terms">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="terms:ContractName" />
+                                <xs:element ref="terms:BillingGracePeriod" />
+                                <xs:element ref="terms:RentalPeriod" />
+                                <xs:element ref="terms:HomeVideoWindow" />
+                                <xs:element maxOccurs="unbounded" ref="terms:SubscriberViewLimit" />
+                                <xs:element ref="terms:SuggestedPrice" />
+                                <xs:element ref="terms:DistributorRoyaltyInfo" />
+                                <xs:element ref="terms:StudioRoyaltyInfo" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Category">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="offer:CategoryPath" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Movie">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="core:AssetName" />
+                                <xs:element ref="core:Product" />
+                                <xs:element ref="core:Provider" />
+                                <xs:element ref="core:Description" />
+                                <xs:element ref="core:Ext" />
+                                <xs:element minOccurs="0" ref="content:MasterSourceRef" />
+                                <xs:element ref="content:SourceUrl" />
+                                <xs:element ref="content:ContentFileSize" />
+                                <xs:element ref="content:ContentCheckSum" />
+                                <xs:element ref="content:PropagationPriority" />
+                                <xs:element ref="content:AudioType" />
+                                <xs:element ref="content:ScreenFormat" />
+                                <xs:element ref="content:Duration" />
+                                <xs:element ref="content:Language" />
+                                <xs:element ref="content:SubtitleLanguage" />
+                                <xs:element ref="content:DubbedLanguage" />
+                                <xs:element ref="content:Rating" />
+                                <xs:element minOccurs="0" ref="content:EncryptionInfo" />
+                                <xs:element minOccurs="0" ref="content:CopyControlInfo" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Preview">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="core:AssetName" />
+                                <xs:element ref="core:Product" />
+                                <xs:element ref="core:Provider" />
+                                <xs:element ref="core:Description" />
+                                <xs:element ref="core:Ext" />
+                                <xs:element ref="content:SourceUrl" />
+                                <xs:element ref="content:ContentFileSize" />
+                                <xs:element ref="content:ContentCheckSum" />
+                                <xs:element ref="content:PropagationPriority" />
+                                <xs:element ref="content:AudioType" />
+                                <xs:element ref="content:ScreenFormat" />
+                                <xs:element ref="content:Duration" />
+                                <xs:element ref="content:Language" />
+                                <xs:element ref="content:SubtitleLanguage" />
+                                <xs:element ref="content:DubbedLanguage" />
+                                <xs:element ref="content:Rating" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="BoxCover">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="core:AlternateId" />
+                                <xs:element ref="core:AssetName" />
+                                <xs:element ref="core:Product" />
+                                <xs:element ref="core:Provider" />
+                                <xs:element ref="core:Description" />
+                                <xs:element ref="core:Ext" />
+                                <xs:element ref="content:SourceUrl" />
+                                <xs:element ref="content:ContentFileSize" />
+                                <xs:element ref="content:ContentCheckSum" />
+                                <xs:element ref="content:PropagationPriority" />
+                                <xs:element ref="content:X_Resolution" />
+                                <xs:element ref="content:Y_Resolution" />
+                            </xs:sequence>
+                            <xs:attribute name="uriId" type="xs:string" use="required" />
+                            <xs:attribute name="providerVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="internalVersionNum" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="creationDateTime" type="xs:dateTime" use="required" />
+                            <xs:attribute name="startDateTime" type="xs:string" use="required" />
+                            <xs:attribute name="endDateTime" type="xs:dateTime" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="App_Data">
+        <xs:complexType>
+            <xs:attribute name="App" type="xs:string" use="required" />
+            <xs:attribute name="Name" type="xs:string" use="required" />
+            <xs:attribute name="Value" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

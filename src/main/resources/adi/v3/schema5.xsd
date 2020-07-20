@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="SourceUrl" type="xs:string" />
+    <xs:element name="ContentFileSize" type="xs:unsignedInt" />
+    <xs:element name="ContentCheckSum" type="xs:string" />
+    <xs:element name="PropagationPriority" type="xs:unsignedByte" />
+    <xs:element name="AudioType" type="xs:string" />
+    <xs:element name="ScreenFormat" type="xs:string" />
+    <xs:element name="Duration" type="xs:duration" />
+    <xs:element name="Language" type="xs:string" />
+    <xs:element name="SubtitleLanguage" type="xs:string" />
+    <xs:element name="DubbedLanguage" type="xs:string" />
+    <xs:element name="Rating">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="ratingSystem" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CopyControlInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="IsCopyProtection" type="xs:boolean" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="X_Resolution" type="xs:unsignedShort" />
+    <xs:element name="Y_Resolution" type="xs:unsignedByte" />
+    <xs:element name="MasterSourceRef">
+        <xs:complexType>
+            <xs:attribute name="uriId" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="EncryptionInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ReceiverType" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
