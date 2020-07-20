@@ -102,6 +102,28 @@ public class MovieItem {
     String movieUrl;
     @JsonProperty(value = "trailer_url")
     String trailerUrl;
+    @JsonProperty("budget")
+    String budget;
+    @JsonProperty("support_download")
+    String supportDownload;
+    @JsonProperty("distribution_list")
+    List<String> distributionList;
+    @JsonProperty("distribution_areas")
+    List<String> distributionAreas;
+    @JsonProperty("sales_methods")
+    List<String> salesMethods;
+    @JsonProperty("sessions_limit")
+    String sessions_limits;
+    @JsonProperty("one_terminal_limit")
+    String oneTerminalLimit;
+    @JsonProperty("max_devices_for_simultaneous_play_est")
+    Long maxDevisesOneTimeEst;
+    @JsonProperty("max_devices_for_simultaneous_play_non_est")
+    Long maxDevisesOneTimeNonEst;
+    @JsonProperty("max_ott_devices_per_account")
+    Long maxOttDevicesPerAccount;
+    @JsonProperty("max_stb_devices_per_account")
+    Long maxStbDevicesPerAccount;
     @JsonProperty(value = "packages_tvh")
     List<String> packagesTvh;
     List<String> downloadable;
