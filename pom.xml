@@ -94,7 +94,7 @@
 				</executions>
 				<configuration>
 					<sources>${project.basedir}/src/main/resources/adi/v3</sources>
-					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<outputDirectory>${project.basedir}/target/generated-sources/</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
