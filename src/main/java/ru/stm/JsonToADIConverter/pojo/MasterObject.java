@@ -30,7 +30,7 @@ public class MasterObject {
     @JsonProperty(value = "audio_type")
     String audioType;
     @JsonProperty(value = "skipping_fragments")
-    List<String> skippingFragmenst;
+    List<SkipingFragment> skippingFragmenst;
     @JsonProperty(value = "is_preview")
     Boolean isPreview;
     @JsonProperty(value = "preview_duration")
