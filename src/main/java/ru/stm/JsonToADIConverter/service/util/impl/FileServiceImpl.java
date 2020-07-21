@@ -6,7 +6,13 @@ import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.service.util.FileService;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -29,6 +35,40 @@ public class FileServiceImpl implements FileService {
             return false;
         }
         return true;
+    }
+
+    public void deleteAllFilesFolder(String path) {
+        if (path.isEmpty()) {
+            log.info("Каталог пуст");
+            return;
+        }
+        File [] files = new File(path).listFiles();
+        if (Objects.nonNull(files)) {
+            for (File myFile :files)
+            if (myFile.isFile()) {
+                myFile.delete();
+                log.info("Файл {} был удален", myFile.getName());
+            }
+        }
+
+    }
+
+    public List<String> readFiles(String outputPath, Charset encoding) {
+        List<String> fileList = new ArrayList<>();
+        File [] files = new File(outputPath).listFiles();
+        if (Objects.nonNull(files)) {
+            for (File myFile :files)
+                if (myFile.isFile()) {
+                    byte[] encoded = new byte[0];
+                    try {
+                        encoded = Files.readAllBytes(Paths.get(myFile.getPath()));
+                    } catch (IOException e) {
+                        log.error("Ошибка чтения файла");
+                    }
+                    fileList.add(new String(encoded, encoding));
+                }
+        }
+        return fileList;
     }
 
 }
