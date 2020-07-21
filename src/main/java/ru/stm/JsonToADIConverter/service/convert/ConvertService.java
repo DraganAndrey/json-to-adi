@@ -10,6 +10,6 @@ import java.util.List;
  * Интерфейс предоставляющий возможность конвертировать Json в Xml представления согласно ADI формата
  */
 public interface ConvertService {
-
+    //Метод конвертирует входящий json в список Adi объектов
     List<ADIType> convert(InputJson inputJson);
 }
