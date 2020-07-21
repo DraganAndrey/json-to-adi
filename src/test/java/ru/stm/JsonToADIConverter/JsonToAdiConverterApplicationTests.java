@@ -65,7 +65,7 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
         try {
             ADIType resultAdi = xmlToObject(resultFileList.get(0));
             ADIType originAdi = xmlToObject(originFileList.get(0));
-            assertTrue(areEqual(getAppData(originAdi), getAppData(resultAdi)));
+            assertTrue(areEqualIgnoringOrder(getAppData(originAdi), getAppData(resultAdi)));
         } catch (JAXBException | XMLStreamException e) {
             log.error("Ошибка конвертации ADI xml в Java объект");
         }
@@ -82,22 +82,39 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
         return adiElement.getValue();
     }
 
-    private Map<String, String> getAppData(ADIType adiType) {
+    private List<AppDataType> getAppData(ADIType adiType) {
         AssetType asset = adiType.getAsset();
-        Map<String, String> appDataMap = new HashMap<>();
         List<AppDataType> list = asset.getMetadata().getAppData();
-        list.forEach(item -> appDataMap.put(item.getName(), item.getAppDataValue()));
-        asset.getAsset().forEach(assetType -> assetType.getMetadata().getAppData().forEach(item -> {
-            appDataMap.put(item.getName(), item.getAppDataValue());
-        }));
-        return appDataMap;
+        asset.getAsset().forEach(assetType -> list.addAll(assetType.getMetadata().getAppData()));
+        return list;
     }
 
-    private boolean areEqual(Map<String, String> first, Map<String, String> second) {
-        if (first.size() != second.size()) {
+    private static boolean areEqualIgnoringOrder(List<AppDataType> list1, List<AppDataType> list2) {
+        Comparator comparator = (Comparator<AppDataType>) (o1, o2) -> {
+            if (!o1.getName().equals(o2.getName())) return 1;
+            if (!o1.getAppDataValue().equals(o2.getAppDataValue())) return 1;
+            return 0;
+        };
+
+        if (list1.size() != list2.size()) {
             return false;
         }
-        return first.entrySet().stream()
-                .allMatch(e -> e.getValue().equals(second.get(e.getKey())));
+
+        List<AppDataType> copy1 = new ArrayList<>(list1);
+        List<AppDataType> copy2 = new ArrayList<>(list2);
+
+        Collections.sort(copy1, comparator);
+        Collections.sort(copy2, comparator);
+
+        Iterator<AppDataType> it1 = copy1.iterator();
+        Iterator<AppDataType> it2 = copy2.iterator();
+        while (it1.hasNext()) {
+            AppDataType t1 = it1.next();
+            AppDataType t2 = it2.next();
+            if (comparator.compare(t1, t2) != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
