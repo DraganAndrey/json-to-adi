@@ -1,25 +1,22 @@
 package ru.stm.JsonToADIConverter.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.InputJson;
-import ru.stm.JsonToADIConverter.schema.*;
+import ru.stm.JsonToADIConverter.schema.ADIType;
+import ru.stm.JsonToADIConverter.schema.AssetType;
 import ru.stm.JsonToADIConverter.service.AssetService;
 import ru.stm.JsonToADIConverter.service.ConvertService;
 import ru.stm.JsonToADIConverter.service.util.FileService;
 
 import javax.xml.bind.JAXBElement;
+import javax.xml.bind.util.JAXBResult;
 import javax.xml.namespace.QName;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;

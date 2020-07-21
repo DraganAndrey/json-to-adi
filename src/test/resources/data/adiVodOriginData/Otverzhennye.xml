@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ADI xmlns:ns2="ADIType">
+    <Asset>
+        <Metadata>
+            <AMS Asset_Name="Otverzhennye_title" Creation_Date="2020-07-21T10:36:15.780038+03:00" Asset_ID="3580c555-03fd-4816-bcd3-70bde960067d" Asset_Class="package"/>
+        </Metadata>
+        <Asset>
+            <Metadata>
+                <AMS Asset_Name="Otverzhennye_title" Creation_Date="2020-07-21T10:36:15.773762+03:00" Asset_ID="577ada26-af3b-4201-a35f-81f536276a16" Asset_Class="movie"/>
+                <App_Data Name="Audio_Type" Value="Stereo"/>
+                <App_Data Name="Frame_Rate" Value="25"/>
+                <App_Data Name="Run_time" Value="9079"/>
+                <App_Data Name="Display_Run_Time" Value="2 часа 31 минута"/>
+                <App_Data Name="Est_Rights_Expirtaion_Date" Value="2021-02-28T23:59:59+03:00"/>
+                <App_Data Name="Est_Rights_Start_Date" Value="2021-02-28T23:59:59+03:00"/>
+                <App_Data Name="Tvod_Rights_Expiration_Date" Value="2021-02-28T23:59:59+03:00"/>
+                <App_Data Name="Tvod_Rights_Start_Date" Value="2020-03-01T00:00:01+03:00"/>
+                <App_Data Name="Tvod_Window" Value="30"/>
+            </Metadata>
+        </Asset>
+        <Asset>
+            <Metadata>
+                <AMS Asset_Name="Otverzhennye_title" Creation_Date="2020-07-21T10:36:15.780148+03:00" Asset_ID="dd6013ee-b89d-47ab-ba11-87d2b2bb99c5" Asset_Class="preview"/>
+                <App_Data Name="Votes" Value="1869"/>
+                <App_Data Name="Is_Preview" Value="false"/>
+                <App_Data Name="Is_Presale" Value="false"/>
+                <App_Data Name="Is_Soon" Value="false"/>
+            </Metadata>
+        </Asset>
+        <Asset>
+            <Metadata>
+                <AMS Asset_Name="Otverzhennye_title" Creation_Date="2020-07-21T10:36:15.780501+03:00" Asset_ID="35e366b0-194c-4514-87d6-3cdf3a47c52f" Asset_Class="title"/>
+                <App_Data Name="Rightholder_Name" Value="Universal"/>
+                <App_Data Name="Genre" Value="Военное"/>
+                <App_Data Name="Genre" Value="Драмы"/>
+                <App_Data Name="Genre" Value="Мелодрамы"/>
+                <App_Data Name="Country_Of_Origin" Value="США"/>
+                <App_Data Name="Country_Of_Origin" Value="Франция"/>
+                <App_Data Name="Country_Of_Origin" Value="Великобритания"/>
+                <App_Data Name="Title" Value="Otverzhennye"/>
+                <App_Data Name="Title_Ru" Value="Отверженные"/>
+                <App_Data Name="Summary_Long" Value="Deystvie razvivaetsya v nachale XIX stoletiya. Beglyy katorzhnik Zhan Val'zhan, prigovorennyy k tyuremnomu zaklyucheniyu, vynuzhden dolgie gody skryvat'sya ot zhestokogo pravosudiya. Inspektor parizhskoy policii Zhaver schitaet ego poimku delom vsey svoey zhizni. Posle smerti Fantiny — zhenschiny, za sud'bu kotoroy Zhan Val'zhan schital sebya v otvete, — edinstvennym blizkim emu chelovekom ostaetsya ee doch' Kozetta. Radi schast'ya devushki Zhan gotov na vse."/>
+                <App_Data Name="Summary_Long_Ru" Value="Deystvie razvivaetsya v nachale XIX stoletiya. Beglyy katorzhnik Zhan Val'zhan, prigovorennyy k tyuremnomu zaklyucheniyu, vynuzhden dolgie gody skryvat'sya ot zhestokogo pravosudiya. Inspektor parizhskoy policii Zhaver schitaet ego poimku delom vsey svoey zhizni. Posle smerti Fantiny — zhenschiny, za sud'bu kotoroy Zhan Val'zhan schital sebya v otvete, — edinstvennym blizkim emu chelovekom ostaetsya ee doch' Kozetta. Radi schast'ya devushki Zhan gotov na vse."/>
+                <App_Data Name="Summary_Short" Value=""/>
+                <App_Data Name="Keyword" Value="france,robbery,brothel,trip,mayor,french revolution,musical,arrest,army,barricade,rebellion,wedding,falling in love,corpse,parole,convict,girl disguised as boy,19th century,"/>
+                <App_Data Name="Keyword_Ru" Value="Франция, ограбление, бордель, поездка, мэр, французская революция, мюзикл, арест, армия, баррикада, восстание, свадьба, влюблённость, труп, условно-досрочное освобождение, осужденный, девушка, замаскированная под мальчика, 19 век"/>
+                <App_Data Name="Year" Value="2012"/>
+                <App_Data Name="Is_Russian" Value="false"/>
+                <App_Data Name="Release_Date" Value="2012-05-10"/>
+                <App_Data Name="Publication_Date" Value="2020-02-20T16:06:58+03:00"/>
+                <App_Data Name="Backdrop_Available" Value="false"/>
+                <App_Data Name="Is_Promotion" Value="true"/>
+                <App_Data Name="Display_As_New" Value="false"/>
+                <App_Data Name="Age_Rating" Value="18"/>
+            </Metadata>
+        </Asset>
+    </Asset>
+</ns2:ADI>

@@ -27,5 +27,5 @@ $ java -jar target/JsonToADIConverter-0.0.1-SNAPSHOT.jar /**входной json 
 Сервис JsonToADIConverter - предназначен для конвертации данных VOD контента в формате _JSON_ и преобразования их в файлы _.xml_ согласно стандарту _ADI 1.1_.
 
 ### Пример входного Json
-Пример входного JSON можно посмотерть в папке _resource/data_ директории проекта.
+Пример входного JSON можно посмотерть в папке _test/resources/data_ директории проекта.
 
