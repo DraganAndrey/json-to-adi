@@ -2,11 +2,14 @@ package ru.stm.JsonToADIConverter.service.helper.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import ru.stm.JsonToADIConverter.schema.ADIType;
 import ru.stm.JsonToADIConverter.service.helper.FileService;
 
-import java.io.File;
-import java.io.IOException;
+import javax.xml.bind.JAXBElement;
+import javax.xml.namespace.QName;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -17,6 +20,9 @@ import java.util.Objects;
 @Service
 @Slf4j
 public class FileServiceImpl implements FileService {
+
+    @Value("${output.path.xml}")
+    private String outputDirectory;
 
     @Override
     public String prepareOutputDirectory(String path) {
@@ -69,6 +75,24 @@ public class FileServiceImpl implements FileService {
                 }
         }
         return fileList;
+    }
+
+    @Override
+    public void writeXmlFile(ADIType adiType) {
+        try {
+            javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext.newInstance(adiType.getClass().getPackage().getName());
+            javax.xml.bind.Marshaller marshaller = jaxbCtx.createMarshaller();
+            marshaller.setProperty(javax.xml.bind.Marshaller.JAXB_ENCODING, "UTF-8");
+            marshaller.setProperty(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+            OutputStream os = new FileOutputStream(String.format("%s%s_%s.xml", this.prepareOutputDirectory(outputDirectory),
+                    String.valueOf(System.currentTimeMillis()),
+                    adiType.getAsset().getMetadata().getAMS().getAssetName()));
+            marshaller.marshal(new JAXBElement<>(new QName("ADIType", "ADI"), ADIType.class, adiType), os);
+        } catch (javax.xml.bind.JAXBException ex) {
+            log.error("Ошибка генерации XML {}", ex);
+        } catch (FileNotFoundException e) {
+            log.error("Файл не найден", e);
+        }
     }
 
 }

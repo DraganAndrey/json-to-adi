@@ -2,8 +2,14 @@ package ru.stm.JsonToADIConverter.service.convert;
 
 import ru.stm.JsonToADIConverter.pojo.InputJson;
 import ru.stm.JsonToADIConverter.pojo.MovieItem;
+import ru.stm.JsonToADIConverter.schema.ADIType;
 
+import java.util.List;
+
+/**
+ * Интерфейс предоставляющий возможность конвертировать Json в Xml представления согласно ADI формата
+ */
 public interface ConvertService {
 
-    void convert(InputJson inputJson);
+    List<ADIType> convert(InputJson inputJson);
 }
