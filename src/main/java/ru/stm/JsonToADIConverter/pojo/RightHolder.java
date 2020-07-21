@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RightHolder {
-    String lang;
-    String text;
+    private String lang;
+    private String text;
 }

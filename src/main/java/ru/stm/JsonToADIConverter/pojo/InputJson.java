@@ -9,10 +9,10 @@ import java.util.List;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class InputJson {
-    JsonParams params;
+    private JsonParams params;
     @JsonProperty(value = "api_version")
-    String apiVerison;
-    JsonResult result;
-    List<String> warning;
-    List<String> error;
+    private String apiVerison;
+    private JsonResult result;
+    private List<String> warning;
+    private List<String> error;
 }

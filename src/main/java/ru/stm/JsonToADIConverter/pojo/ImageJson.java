@@ -6,10 +6,10 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ImageJson {
-    String type;
-    String mime;
-    String lang;
-    Integer width;
-    Integer height;
-    String url;
+    private String type;
+    private String mime;
+    private String lang;
+    private Integer width;
+    private Integer height;
+    private String url;
 }

@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonResult {
-    Integer total;
-    Integer count;
-    List<MovieItem> items;
+    private Integer total;
+    private Integer count;
+    private List<MovieItem> items;
 }

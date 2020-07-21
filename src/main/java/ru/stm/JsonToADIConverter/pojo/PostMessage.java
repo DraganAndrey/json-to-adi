@@ -7,12 +7,12 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PostMessage {
-    String title;
-    String body;
+    private String title;
+    private String body;
     @JsonProperty(value = "button_text")
-    String buttonText;
+    private String buttonText;
     @JsonProperty(value = "button_link")
-    String buttonLink;
+    private String buttonLink;
     @JsonProperty(value = "promoted_content")
-    String promotedContent;
+    private String promotedContent;
 }

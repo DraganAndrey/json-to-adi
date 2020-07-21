@@ -5,8 +5,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Director {
-    private Long id;
-    private String name;
-    private String name_en;
+public class AreasPrice {
+    private Long areaId;
+    private String price;
 }

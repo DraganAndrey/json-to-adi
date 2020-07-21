@@ -8,7 +8,7 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Genre {
     @JsonProperty(value = "genre_id")
-    Long genreId;
-    String title;
-    String type;
+    private Long genreId;
+    private String title;
+    private String type;
 }
