@@ -1,4 +1,4 @@
-package ru.stm.JsonToADIConverter.service.util;
+package ru.stm.JsonToADIConverter.service.helper;
 
 import ru.stm.JsonToADIConverter.schema.AppDataType;
 

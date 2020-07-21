@@ -1,9 +1,9 @@
-package ru.stm.JsonToADIConverter.service.util.impl;
+package ru.stm.JsonToADIConverter.service.helper.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import ru.stm.JsonToADIConverter.service.util.FileService;
+import ru.stm.JsonToADIConverter.service.helper.FileService;
 
 import java.io.File;
 import java.io.IOException;

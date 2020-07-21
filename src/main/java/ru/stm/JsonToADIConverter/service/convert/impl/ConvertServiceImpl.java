@@ -1,4 +1,4 @@
-package ru.stm.JsonToADIConverter.service.impl;
+package ru.stm.JsonToADIConverter.service.convert.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.InputJson;
 import ru.stm.JsonToADIConverter.schema.ADIType;
 import ru.stm.JsonToADIConverter.schema.AssetType;
-import ru.stm.JsonToADIConverter.service.AssetService;
-import ru.stm.JsonToADIConverter.service.ConvertService;
-import ru.stm.JsonToADIConverter.service.util.FileService;
+import ru.stm.JsonToADIConverter.service.adi.AdiService;
+import ru.stm.JsonToADIConverter.service.asset.AssetService;
+import ru.stm.JsonToADIConverter.service.convert.ConvertService;
+import ru.stm.JsonToADIConverter.service.helper.FileService;
 
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.util.JAXBResult;
 import javax.xml.namespace.QName;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,6 +31,10 @@ public class ConvertServiceImpl implements ConvertService {
 
     @Autowired
     private List<AssetService> assetServiceList;
+
+    @Autowired
+    private AdiService adiService;
+
     @Autowired
     private FileService fileService;
 
@@ -46,11 +50,12 @@ public class ConvertServiceImpl implements ConvertService {
                     .stream()
                     .map(service -> service.prepareAsset(item))
                     .collect(Collectors.toList());
-            ADIType adiType = new ADIType();
-            adiType.setAsset(assetTypeList.stream().filter(asset -> asset.getMetadata().getAMS().getAssetClass().equals("package")).findFirst().get());
+
+            ADIType adiType = adiService.initAdi(item);
+            adiType.setAsset(assetTypeList.stream().filter(asset -> asset.getMetadata().getAMS().getAssetClass().equals("title")).findFirst().get());
             adiType.getAsset()
                     .getAsset()
-                    .addAll(assetTypeList.stream().filter(asset -> !asset.getMetadata().getAMS().getAssetClass().equals("package")).collect(Collectors.toList()));
+                    .addAll(assetTypeList.stream().filter(asset -> !asset.getMetadata().getAMS().getAssetClass().equals("title")).collect(Collectors.toList()));
             return adiType;
         }).collect(Collectors.toList());
 

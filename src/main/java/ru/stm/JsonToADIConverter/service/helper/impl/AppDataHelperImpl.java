@@ -1,8 +1,8 @@
-package ru.stm.JsonToADIConverter.service.util.impl;
+package ru.stm.JsonToADIConverter.service.helper.impl;
 
 import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
-import ru.stm.JsonToADIConverter.service.util.AppDataHelper;
+import ru.stm.JsonToADIConverter.service.helper.AppDataHelper;
 
 import java.util.List;
 import java.util.Objects;

@@ -1,17 +1,14 @@
-package ru.stm.JsonToADIConverter.service.impl;
+package ru.stm.JsonToADIConverter.service.asset.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.stm.JsonToADIConverter.pojo.*;
-import ru.stm.JsonToADIConverter.schema.AMSType;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
 import ru.stm.JsonToADIConverter.schema.AssetType;
 import ru.stm.JsonToADIConverter.schema.MetadataType;
-import ru.stm.JsonToADIConverter.service.AbstractAssetService;
-import ru.stm.JsonToADIConverter.service.AssetService;
-import ru.stm.JsonToADIConverter.service.util.AppDataHelper;
+import ru.stm.JsonToADIConverter.service.asset.AbstractAssetService;
+import ru.stm.JsonToADIConverter.service.helper.AppDataHelper;
 
-import java.time.OffsetDateTime;
 import java.util.*;
 
 @Service

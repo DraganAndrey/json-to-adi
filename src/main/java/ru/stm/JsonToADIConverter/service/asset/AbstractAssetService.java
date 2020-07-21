@@ -1,8 +1,9 @@
-package ru.stm.JsonToADIConverter.service;
+package ru.stm.JsonToADIConverter.service.asset;
 
 import org.apache.commons.lang3.StringUtils;
 import ru.stm.JsonToADIConverter.pojo.MovieItem;
 import ru.stm.JsonToADIConverter.schema.AMSType;
+import ru.stm.JsonToADIConverter.service.asset.AssetService;
 
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
