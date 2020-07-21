@@ -11,8 +11,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Класс который является общим предком для всех Asset-сервисов
+ */
 public abstract class AbstractAssetService  implements AssetService {
 
+    /**
+     * Генерация AMS тега для большинства сервисов сейчас одинакова
+     * @param movieItem
+     * @return AMSType
+     */
     protected AMSType prepareAms(MovieItem movieItem){
         AMSType amsType = new AMSType();
         amsType.setAssetClass(getServiceName());
@@ -22,14 +30,21 @@ public abstract class AbstractAssetService  implements AssetService {
         return amsType;
     }
 
-
-
+    /**
+     * Создает title для AMS тега
+     * @param movieTitle
+     * @return String
+     */
     protected String prepareAmsTitle(String movieTitle){
         List<String> titleList = new ArrayList<>(Arrays.asList(movieTitle.split(StringUtils.SPACE)));
         titleList.add("title");
         return String.join("_", titleList);
     }
 
-
+    /**
+     * Метод, который возвращает тип ассета,
+     * который может подготовить данный сервис
+     * @return String
+     */
     protected abstract String getServiceName();
 }

@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Класс для создания ассета типа preview
+ */
 @Service
 public class AssetPreviewServiceImpl extends AbstractAssetService {
 
