@@ -11,6 +11,9 @@ import ru.stm.JsonToADIConverter.service.helper.AppDataHelper;
 
 import java.util.*;
 
+/**
+ * Класс для создания ассета типа title
+ */
 @Service
 public class AssetTitleServiceImpl extends AbstractAssetService {
 
