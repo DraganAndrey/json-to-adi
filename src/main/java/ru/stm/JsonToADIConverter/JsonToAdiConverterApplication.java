@@ -16,9 +16,6 @@ import java.io.IOException;
 @Slf4j
 public class JsonToAdiConverterApplication {
 
-    @Autowired
-    private ConvertService convertService;
-
     public static void main(String[] args) {
         SpringApplication.run(JsonToAdiConverterApplication.class, args);
     }
