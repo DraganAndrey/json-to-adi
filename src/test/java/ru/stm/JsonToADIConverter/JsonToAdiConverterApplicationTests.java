@@ -48,7 +48,11 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
     void contextLoads() {
     }
 
-
+    /**
+     * Проверяем конвертацию данных в формате Json в формат XML согласно спецификации ADI,
+     * проверяем корректность данных полученных в результате конвертации с эталонными значениями
+     * @throws JAXBException
+     */
     @Test
     void convertJsonToAdiTest() throws JAXBException {
         try {
@@ -72,6 +76,13 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
         fileService.deleteAllFilesFolder(TEST_DATA_DIR);
     }
 
+    /**
+     * Конвертация xml в объект ADIType {@link ADIType}
+     * @param xmlString
+     * @return
+     * @throws XMLStreamException
+     * @throws JAXBException
+     */
     private ADIType xmlToObject(String xmlString) throws XMLStreamException, JAXBException {
         InputStream stream = new ByteArrayInputStream(xmlString.getBytes(StandardCharsets.UTF_8));
         JAXBContext jaxbContext = JAXBContext.newInstance(ADIType.class);
@@ -82,6 +93,11 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
         return adiElement.getValue();
     }
 
+    /**
+     * Получение данных из объекта ADIType {@link ADIType}
+     * @param adiType
+     * @return
+     */
     private List<AppDataType> getAppData(ADIType adiType) {
         AssetType asset = adiType.getAsset();
         List<AppDataType> list = asset.getMetadata().getAppData();
@@ -89,6 +105,12 @@ class JsonToAdiConverterApplicationTests extends XMLTestCase {
         return list;
     }
 
+    /**
+     * Сравнение данных
+     * @param list1
+     * @param list2
+     * @return
+     */
     private static boolean areEqualIgnoringOrder(List<AppDataType> list1, List<AppDataType> list2) {
         Comparator comparator = (Comparator<AppDataType>) (o1, o2) -> {
             if (!o1.getName().equals(o2.getName())) return 1;
