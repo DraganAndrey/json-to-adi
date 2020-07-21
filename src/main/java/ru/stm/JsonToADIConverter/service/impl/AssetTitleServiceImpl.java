@@ -2,8 +2,7 @@ package ru.stm.JsonToADIConverter.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.stm.JsonToADIConverter.pojo.InputJson;
-import ru.stm.JsonToADIConverter.pojo.MovieItem;
+import ru.stm.JsonToADIConverter.pojo.*;
 import ru.stm.JsonToADIConverter.schema.AMSType;
 import ru.stm.JsonToADIConverter.schema.AppDataType;
 import ru.stm.JsonToADIConverter.schema.AssetType;
@@ -13,10 +12,7 @@ import ru.stm.JsonToADIConverter.service.AssetService;
 import ru.stm.JsonToADIConverter.service.util.AppDataHelper;
 
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class AssetTitleServiceImpl extends AbstractAssetService {
@@ -43,9 +39,19 @@ public class AssetTitleServiceImpl extends AbstractAssetService {
 
         List<AppDataType> appDataTypes = new ArrayList<>();
 
-        helper.addAppData("Rightholder_Name",movieItem.getRightHolderName(),appDataTypes);
-        helper.addAppData("Genre", movieItem.getGenres(),appDataTypes);
-        helper.addAppData("Country_Of_Origin", movieItem.getCountries(),appDataTypes);
+        List<RightHolder> rightHolders = movieItem.getRightHolderName();
+        if (Objects.nonNull(rightHolders) && !rightHolders.isEmpty()) {
+            rightHolders.forEach(rightHolder -> helper.addAppData("Rightholder_Name", rightHolder.getText(), appDataTypes));
+        }
+
+        List<Genre> genres = movieItem.getGenres();
+        if (Objects.nonNull(genres) && !genres.isEmpty()) {
+            genres.forEach(genre -> helper.addAppData("Genre", genre.getTitle(), appDataTypes));
+        }
+        List<Country> countries = movieItem.getCountries();
+        if (Objects.nonNull(countries) && !countries.isEmpty()) {
+            countries.forEach(country -> helper.addAppData("Country_Of_Origin", country.getName(),appDataTypes));
+        }
 
         helper.addAppData("Title",movieItem.getTitleEn(),appDataTypes);
         helper.addAppData("Title_Ru",movieItem.getTitleRu(),appDataTypes);
@@ -80,7 +86,6 @@ public class AssetTitleServiceImpl extends AbstractAssetService {
         helper.addAppData("Max_Devices_For_Simultaneous_Play_Non_Est", movieItem.getMaxDevisesOneTimeNonEst(),appDataTypes);
         helper.addAppData("Max_Ott_Devices_Per_Account",movieItem.getMaxOttDevicesPerAccount(),appDataTypes);
         helper.addAppData("Max_Stb_Devices_Per_Account",movieItem.getMaxStbDevicesPerAccount(),appDataTypes);
-
 
         return appDataTypes;
     }
