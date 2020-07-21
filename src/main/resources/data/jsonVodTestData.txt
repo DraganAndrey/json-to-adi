@@ -1,0 +1,282 @@
+{
+    "params": {
+        "cookies": {
+            "BCSI-CS-480ab1450c6fa1d9": "2",
+            "BCSI-CS-9cefe7cf46b67d46": "2",
+            "stream_sid": ""
+        },
+        "arguments": {
+            "client": ["mts_epk|0.1-huawei"]
+        }
+    },
+    "api_version": "4.22.67",
+    "result": {
+        "total": 10,
+        "count": 10,
+        "items": [{
+                "content_type": "movie",
+                "content_id": 3380768,
+                "primary_genres": [41],
+                "studios": [],
+                "is_russian": false,
+                "publication_unixtime": 1377201600,
+                "mpaa_rating": "PG-13",
+                "age_rating": 18,
+                "tagline": "",
+                "release_date": "2012-05-10",
+                "rightholder_name": [{
+                        "lang": "rus",
+                        "text": "Universal"
+                    }
+                ],
+                "is_perfect": false,
+                "tvod_rights_start_date": "2020-03-01T00:00:01+03:00",
+                "tvod_rights_expiration_date": "2021-02-28T23:59:59+03:00",
+                "svod_rights_start_date": null,
+                "svod_rights_expiration_date": null,
+                "est_rights_start_date": "2020-03-01T00:00:01+03:00",
+                "est_rights_expiration_date": "2021-02-28T23:59:59+03:00",
+                "fvod_rights_start_date": null,
+                "fvod_rights_expiration_date": null,
+                "rating": 7.05,
+                "description": "В парижском пригороде Монфермей, воспетом в знаменитом романе Виктора Гюго как место полицейского произвола и обиталище отбросов общества, за два века ничего не изменилось. Новичок Стефан по прозвищу Пенто заступает на службу в местный отдел полиции. С пушками в кобуре и дубинками в руках его новые соратники творят на улицах района то, что они называют справедливостью, пока однажды не попадают на камеру дрона одного парнишки.",
+                "image_objs": [{
+                        "type": "vposter",
+                        "mime": "image\/jpeg",
+                        "lang": null,
+                        "width": 600,
+                        "height": 840,
+                        "url": "http:\/\/media.omlet.ru\/media\/img\/movies\/vposter\/plain\/3380768\/600_840.jpg"
+                    }, {
+                        "type": "hposter",
+                        "mime": null,
+                        "lang": null,
+                        "width": null,
+                        "height": null,
+                        "url": "http:\/\/media.omlet.ru\/\/media\/img\/movies\/hposter\/plain\/3380768\/1920_1080.jpg"
+                    }
+                ],
+                "priority": 3,
+                "post_message": {
+                    "title": null,
+                    "body": null,
+                    "button_text": null,
+                    "button_link": null,
+                    "promoted_content": null
+                },
+                "is_promotion": true,
+                "is_novelty": false,
+                "is_soon": false,
+                "has_nfc": false,
+                "source_id": 1,
+                "cdn_type": null,
+                "in_cdn": false,
+                "presale_target_date": null,
+                "presale_start_date": null,
+                "title_en": "Otverzhennye",
+                "title_ru": "Отверженные",
+                "duration": 9079,
+                "duration_text": "2 часа 31 минута",
+                "tvod_window": 30,
+                "content_category": "library",
+                "description_en": "Deystvie razvivaetsya v nachale XIX stoletiya. Beglyy katorzhnik Zhan Val'zhan, prigovorennyy k tyuremnomu zaklyucheniyu, vynuzhden dolgie gody skryvat'sya ot zhestokogo pravosudiya. Inspektor parizhskoy policii Zhaver schitaet ego poimku delom vsey svoey zhizni. Posle smerti Fantiny — zhenschiny, za sud'bu kotoroy Zhan Val'zhan schital sebya v otvete, — edinstvennym blizkim emu chelovekom ostaetsya ee doch' Kozetta. Radi schast'ya devushki Zhan gotov na vse.",
+                "keywords_ru": "Франция, ограбление, бордель, поездка, мэр, французская революция, мюзикл, арест, армия, баррикада, восстание, свадьба, влюблённость, труп, условно-досрочное освобождение, осужденный, девушка, замаскированная под мальчика, 19 век",
+                "keywords_en": "france,robbery,brothel,trip,mayor,french revolution,musical,arrest,army,barricade,rebellion,wedding,falling in love,corpse,parole,convict,girl disguised as boy,19th century,",
+                "datetime_create": "2013-05-06T12:48:30+04:00",
+                "datetime_modify": "2020-06-26T16:33:56+03:00",
+                "votes": 1869,
+                "popularity": 0,
+                "backdrop_available": false,
+                "movie_url": null,
+                "trailer_url": null,
+                "packages_tvh": ["est_hd_249rub", "est_sd_199rub", "tvod_hd_149rub", "tvod_sd_99rub"],
+                "downloadable": ["est", "tvod"],
+                "master_objs": [{
+                        "id": 873015,
+                        "type": "main",
+                        "size": 28007141323,
+                        "mime": "video\/mp4",
+                        "location": "stream",
+                        "path": "\/srv\/storage0\/mf\/O\/Otverzhennye.3380768\/Otverzhennye_0.mp4",
+                        "url": null,
+                        "name": null,
+                        "description": null,
+                        "lang": "rus",
+                        "duration": 9079,
+                        "width": 1920,
+                        "height": 1080,
+                        "bitrate": 24677417,
+                        "content_resolution": null,
+                        "fps": 25,
+                        "is_hdr": null,
+                        "audio_type": "Stereo",
+                        "skipping_fragments": [],
+                        "is_preview": false,
+                        "preview_duration": null,
+                        "preview_start_time": null,
+                        "duration_text": "2 часа 31 минута",
+                        "format": "HD",
+                        "subtitles": []
+                    }
+                ],
+                "trailer_array": [],
+                "is_presale": false,
+                "datetime_publication": "2020-02-20T16:06:58+03:00",
+                "rightholder_content_id": null,
+                "playback_id": null,
+                "sound_tracks_description": [],
+                "external_ids": [{
+                        "source_id": 30,
+                        "value": "1256262"
+                    }, {
+                        "source_id": 31,
+                        "value": "tt1707386"
+                    }, {
+                        "source_id": 32,
+                        "value": "82695"
+                    }
+                ],
+                "movie_drm": null,
+                "price": {},
+                "trailer_available": false,
+                "file_data": {},
+                "year": "2012",
+                "countries": [{
+                        "name": "США"
+                    }, {
+                        "name": "Франция"
+                    }, {
+                        "name": "Великобритания"
+                    }
+                ],
+                "genres": [{
+                        "genre_id": 47,
+                        "title": "Военное",
+                        "type": null
+                    }, {
+                        "genre_id": 41,
+                        "title": "Драмы",
+                        "type": null
+                    }, {
+                        "genre_id": 46,
+                        "title": "Мелодрамы",
+                        "type": null
+                    }
+                ],
+                "actors": [{
+                        "id": 4466,
+                        "name": "Джули Эндрюс",
+                        "name_en": "Julie Andrews"
+                    }, {
+                        "id": 353442,
+                        "name": "Алексис Маненти",
+                        "name_en": null
+                    }, {
+                        "id": 353445,
+                        "name": "Аль-Хассан Ли",
+                        "name_en": null
+                    }, {
+                        "id": 353447,
+                        "name": "Альмами Кануте",
+                        "name_en": null
+                    }, {
+                        "id": 127165,
+                        "name": "Дамиен Боннар",
+                        "name_en": null
+                    }, {
+                        "id": 118648,
+                        "name": "Дженна Бойд",
+                        "name_en": "Jenna Boyd"
+                    }, {
+                        "id": 353443,
+                        "name": "Джибрил Зонга",
+                        "name_en": null
+                    }, {
+                        "id": 107651,
+                        "name": "Джина Бек",
+                        "name_en": "Gina Beck"
+                    }, {
+                        "id": 102225,
+                        "name": "Джулия Уорсли",
+                        "name_en": "Julia Worsley"
+                    }, {
+                        "id": 103916,
+                        "name": "Дэвид Робертс",
+                        "name_en": "David Roberts"
+                    }, {
+                        "id": 353444,
+                        "name": "Иса Перица",
+                        "name_en": null
+                    }, {
+                        "id": 353450,
+                        "name": "Лучиано Лопес",
+                        "name_en": null
+                    }, {
+                        "id": 112608,
+                        "name": "Марк Донован",
+                        "name_en": "Mark Donovan"
+                    }, {
+                        "id": 353448,
+                        "name": "Низар Бен Фатма",
+                        "name_en": null
+                    }, {
+                        "id": 128813,
+                        "name": "Николя Слоун",
+                        "name_en": "Nicola Sloane"
+                    }, {
+                        "id": 5971,
+                        "name": "Рассел Кроу",
+                        "name_en": "Russell Crowe"
+                    }, {
+                        "id": 116231,
+                        "name": "Ричард Бреммер",
+                        "name_en": "Richard Bremmer"
+                    }, {
+                        "id": 353449,
+                        "name": "Рэймонд Лопес",
+                        "name_en": null
+                    }, {
+                        "id": 107650,
+                        "name": "Саманта Баркс",
+                        "name_en": "Samantha Barks"
+                    }, {
+                        "id": 353446,
+                        "name": "Стив Тьеншо",
+                        "name_en": null
+                    }, {
+                        "id": 102713,
+                        "name": "Тони Рор",
+                        "name_en": "Tony Rohr"
+                    }, {
+                        "id": 2482,
+                        "name": "Хелена Бонем Картер",
+                        "name_en": "Helena Bonham Carter"
+                    }, {
+                        "id": 7081,
+                        "name": "Хью Джекман",
+                        "name_en": "Hugh Jackman"
+                    }, {
+                        "id": 4611,
+                        "name": "Энн Хэтэуэй",
+                        "name_en": "Anne Hathaway"
+                    }, {
+                        "id": 105141,
+                        "name": "Эшли Артус",
+                        "name_en": "Ashley Artus"
+                    }
+                ],
+                "directors": [{
+                        "id": 353451,
+                        "name": "Ладж Ли",
+                        "name_en": null
+                    }, {
+                        "id": 102390,
+                        "name": "Том Хупер",
+                        "name_en": "Tom Hooper"
+                    }
+                ],
+                "in_subscriptions": []
+            }
+    ]
+  }
+}
