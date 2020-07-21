@@ -17,6 +17,20 @@ public interface FileService {
     String prepareOutputDirectory(String path);
 
     /**
+     * Удаляет файлы из директории
+     * @param path
+     */
+    void deleteAllFilesFolder(String path);
+
+    /**
+     * Считывает файлы в указанной директории
+     * @param path
+     * @param encoding
+     * @return
+     */
+
+    List<String> readFiles(String path, Charset encoding);
+    /**
      * Записывает XMl в выходную директорию
      * @param adiType
      */
